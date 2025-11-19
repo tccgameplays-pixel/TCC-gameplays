@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Denúncias Anônimas - Escola Julio Mesquita</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Canal de Denúncias Anônimas</h1>
+    <p>Escola Julio Mesquita</p>
+  </header>
+
+  <main>
+    <form id="reportForm">
+      <label for="category">Categoria:</label>
+      <select id="category" required>
+        <option value="">Selecione...</option>
+        <option value="Bullying">Bullying</option>
+        <option value="Violência">Violência</option>
+        <option value="Discriminação">Discriminação</option>
+        <option value="Vandalismo">Vandalismo</option>
+        <option value="Outros">Outros</option>
+      </select>
+
+      <label for="location">Local:</label>
+      <input type="text" id="location" placeholder="Ex.: sala, pátio">
+
+      <label for="details">Descrição:</label>
+      <textarea id="details" rows="6" required></textarea>
+
+      <button type="submit">Enviar denúncia</button>
+    </form>
+
+    <section id="reports">
+      <h2>Denúncias registradas (simulação)</h2>
+      <ul id="reportList"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <small>© 2025 Escola Julio Mesquita</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
