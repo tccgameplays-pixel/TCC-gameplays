@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!category || !details.trim()) {
       showMessage("⚠️ Preencha os campos obrigatórios!", "error");
       return;
+    } else {
+      showMessage("Sua denuncia foi feita com sucesso!")
     }
 
     // Gerar protocolo único
