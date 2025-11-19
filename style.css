@@ -1,54 +1,58 @@
-/* Reset */
+/* Reset global */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Corpo */
 body {
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
-  background: #ffffff;
+  background: linear-gradient(135deg, #f0f4ff, #ffffff);
   color: #1a2a4f;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  line-height: 1.6;
 }
 
 /* Cabeçalho */
 header {
-  background: #1a2a4f;
+  background: linear-gradient(135deg, #1a2a4f, #2c3e70);
   color: #fff;
-  padding: 40px 20px;
+  padding: 50px 20px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
 }
 
 header h1 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   margin-bottom: 10px;
+  letter-spacing: 1px;
 }
 
 header p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   opacity: 0.9;
 }
 
 /* Container principal */
 main {
   flex: 1;
-  max-width: 700px;
-  margin: 40px auto;
+  max-width: 800px;
+  margin: 50px auto;
   background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  animation: fadeIn 0.6s ease;
 }
 
 /* Formulário */
 form {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 20px;
 }
 
 label {
@@ -57,27 +61,36 @@ label {
 }
 
 input, select, textarea {
-  padding: 12px;
+  padding: 14px;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #1a2a4f;
+  box-shadow: 0 0 10px rgba(26,42,79,0.3);
+  outline: none;
 }
 
 button {
-  background: #1a2a4f;
+  background: linear-gradient(135deg, #1a2a4f, #2c3e70);
   color: #fff;
   font-weight: bold;
-  padding: 14px;
+  padding: 16px;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
 }
 
 button:hover {
-  background: #2c3e70;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(26,42,79,0.4);
 }
 
-/* Tela de confirmação grande */
+/* Tela de confirmação (modal) */
 #confirmationOverlay {
   position: fixed;
   inset: 0;
@@ -86,17 +99,19 @@ button:hover {
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  animation: fadeIn 0.4s ease;
 }
 
 .confirmationContent {
-  background: #e6fffa;
-  border: 2px solid #10b981;
-  border-radius: 12px;
+  background: #ffffff;
+  border: 3px solid #10b981;
+  border-radius: 16px;
   padding: 50px;
   text-align: center;
-  width: 80%;
+  width: 85%;
   max-width: 600px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+  animation: zoomIn 0.4s ease;
 }
 
 #confirmationMessage {
@@ -107,17 +122,20 @@ button:hover {
 }
 
 #okButton {
-  background: #065f46;
+  background: #10b981;
   color: #fff;
   padding: 14px 28px;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 1.2rem;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 #okButton:hover {
   background: #0b7a5c;
+  transform: scale(1.05);
 }
 
 /* Lista de denúncias */
@@ -126,8 +144,9 @@ button:hover {
 }
 
 #reports h2 {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   color: #1a2a4f;
+  font-size: 1.4rem;
 }
 
 #reportList {
@@ -138,7 +157,33 @@ button:hover {
 #reportList li {
   background: #f9fafb;
   border-left: 6px solid #1a2a4f;
-  margin-bottom: 14px;
-  padding: 14px;
-  border-radius: 8px;
+  margin-bottom: 16px;
+  padding: 16px;
+  border-radius: 10px;
+  transition: transform 0.2s, background 0.3s;
+}
+
+#reportList li:hover {
+  transform: scale(1.02);
+  background: #eef2ff;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #fff;
+  font-size: 0.95rem;
+  background: linear-gradient(135deg, #1a2a4f, #2c3e70);
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
