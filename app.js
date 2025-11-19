@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     renderReports();
 
     // Exibir mensagem de sucesso
-    showMessage(`✅ Sua denúncia foi registrada com sucesso! Protocolo: ${protocol}`, "success");
+    showMessage("✅ Sua denúncia foi feita! Protocolo: " + protocol, "success");
   });
 
   function renderReports() {
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Função para mostrar mensagens
   function showMessage(text, type) {
     confirmationMessage.textContent = text;
-    confirmationMessage.className = type;
+    confirmationMessage.className = type; // aplica classe success ou error
     confirmationMessage.style.display = "block";
 
     // Esconde automaticamente após 5 segundos
@@ -66,7 +66,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 5000);
   }
 });
-function showMessage() {
-  const msg = document.getElementById("confirmationMessage");
-  msg.classList.remove("hidden"); // mostra a mensagem
-}
