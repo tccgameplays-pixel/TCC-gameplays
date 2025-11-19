@@ -26,13 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
     form.reset();
     renderReports();
 
-    // Exibir tela de confirmação grande
     confirmationMessage.textContent = "✅ Sua denúncia foi feita";
     confirmationOverlay.style.display = "flex";
   });
 
   okButton.addEventListener("click", () => {
-    // Atualiza a página ao clicar em OK
     location.reload();
   });
 
