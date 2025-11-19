@@ -1,4 +1,4 @@
-/* Reset básico */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +8,7 @@
 body {
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
   background: #ffffff; /* fundo branco */
-  color: #1a2a4f;      /* azul escuro para textos */
+  color: #1a2a4f;      /* azul escuro */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,7 +16,7 @@ body {
 
 /* Cabeçalho */
 header {
-  background: #1a2a4f; /* azul escuro */
+  background: #1a2a4f;
   color: #fff;
   padding: 40px 20px;
   text-align: center;
@@ -94,14 +94,19 @@ button:hover {
   border-radius: 8px;
   font-weight: bold;
   text-align: center;
-  display: none;
+  display: none; /* começa escondido */
 }
 
 .success {
   background: #e6fffa;
   color: #065f46;
   border: 1px solid #10b981;
-  display: block;
+}
+
+.error {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #dc2626;
 }
 
 /* Lista de denúncias */

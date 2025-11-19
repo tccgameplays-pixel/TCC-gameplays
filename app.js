@@ -15,9 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const details = document.getElementById("details").value;
 
     if (!category || !details.trim()) {
-      confirmationMessage.textContent = "⚠️ Preencha os campos obrigatórios!";
-      confirmationMessage.className = "success";
-      confirmationMessage.classList.remove("hidden");
+      showMessage("⚠️ Preencha os campos obrigatórios!", "error");
       return;
     }
 
@@ -38,10 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
     form.reset();
     renderReports();
 
-    // Exibir mensagem na tela
-    confirmationMessage.textContent = `✅ Sua denúncia foi registrada com sucesso! Protocolo: ${protocol}`;
-    confirmationMessage.className = "success";
-    confirmationMessage.classList.remove("hidden");
+    // Exibir mensagem de sucesso
+    showMessage(`✅ Sua denúncia foi registrada com sucesso! Protocolo: ${protocol}`, "success");
   });
 
   function renderReports() {
@@ -56,5 +52,17 @@ document.addEventListener("DOMContentLoaded", () => {
       `;
       reportList.appendChild(li);
     });
+  }
+
+  // Função para mostrar mensagens
+  function showMessage(text, type) {
+    confirmationMessage.textContent = text;
+    confirmationMessage.className = type;
+    confirmationMessage.style.display = "block";
+
+    // Esconde automaticamente após 5 segundos
+    setTimeout(() => {
+      confirmationMessage.style.display = "none";
+    }, 5000);
   }
 });
