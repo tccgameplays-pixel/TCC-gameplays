@@ -18,55 +18,51 @@ body {
 header {
   background: #1a2a4f;
   color: #fff;
-  padding: 40px 20px;
+  padding: 30px 20px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 header h1 {
-  font-size: 2.2rem;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  margin-bottom: 8px;
 }
 
 header p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   opacity: 0.9;
 }
 
 /* Container principal */
 main {
-  flex: 1;
   max-width: 700px;
-  margin: 40px auto;
+  margin: 30px auto;
   background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 
 /* Formulário */
 form {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 15px;
 }
 
 label {
-  font-weight: 600;
+  font-weight: bold;
   color: #1a2a4f;
 }
 
 input, select, textarea {
-  padding: 12px;
+  padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 6px;
   font-size: 1rem;
-  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 input:focus, select:focus, textarea:focus {
   border-color: #1a2a4f;
-  box-shadow: 0 0 6px rgba(26,42,79,0.4);
   outline: none;
 }
 
@@ -74,23 +70,21 @@ button {
   background: #1a2a4f;
   color: #fff;
   font-weight: bold;
-  padding: 14px;
+  padding: 12px;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.3s;
 }
 
 button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(26,42,79,0.4);
+  background: #2c3e70;
 }
 
 /* Mensagem de confirmação */
 #confirmationMessage {
-  margin-top: 20px;
-  padding: 14px;
-  border-radius: 8px;
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 6px;
   font-weight: bold;
   text-align: center;
   display: none; /* começa escondido */
@@ -110,7 +104,7 @@ button:hover {
 
 /* Lista de denúncias */
 #reports {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 #reports h2 {
@@ -125,23 +119,8 @@ button:hover {
 
 #reportList li {
   background: #f9fafb;
-  border-left: 6px solid #1a2a4f;
-  margin-bottom: 14px;
-  padding: 14px;
-  border-radius: 8px;
-  transition: transform 0.2s, background 0.3s;
-}
-
-#reportList li:hover {
-  transform: scale(1.02);
-  background: #eef2ff;
-}
-
-/* Rodapé */
-footer {
-  text-align: center;
-  padding: 20px;
-  color: #fff;
-  font-size: 0.9rem;
-  background: #1a2a4f;
+  border-left: 5px solid #1a2a4f;
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 6px;
 }

@@ -3,9 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const reportList = document.getElementById("reportList");
   const confirmationMessage = document.getElementById("confirmationMessage");
 
-  // Carregar denúncias salvas
-  const reports = JSON.parse(localStorage.getItem("reports")) || [];
-  renderReports();
+  // Array em memória (não persiste em JSON/localStorage)
+  const reports = [];
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -17,15 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!category || !details.trim()) {
       showMessage("⚠️ Preencha os campos obrigatórios!", "error");
       return;
-    } else {
-      showMessage("Sua denuncia foi feita com sucesso!")
     }
 
     // Gerar protocolo único
     const protocol = "JM-" + Date.now();
 
     const report = {
-      id: Date.now(),
       category,
       location,
       details,
@@ -33,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     reports.push(report);
-    localStorage.setItem("reports", JSON.stringify(reports));
 
     form.reset();
     renderReports();
@@ -61,10 +56,5 @@ document.addEventListener("DOMContentLoaded", () => {
     confirmationMessage.textContent = text;
     confirmationMessage.className = type; // aplica classe success ou error
     confirmationMessage.style.display = "block";
-
-    // Esconde automaticamente após 5 segundos
-    setTimeout(() => {
-      confirmationMessage.style.display = "none";
-    }, 5000);
   }
 });
