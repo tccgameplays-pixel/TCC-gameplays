@@ -7,8 +7,8 @@
 
 body {
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
-  background: linear-gradient(135deg, #4facfe, #00f2fe);
-  color: #333;
+  background: #ffffff; /* fundo branco */
+  color: #1a2a4f;      /* azul escuro para textos */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,8 +16,7 @@ body {
 
 /* Cabeçalho */
 header {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
+  background: #1a2a4f; /* azul escuro */
   color: #fff;
   padding: 40px 20px;
   text-align: center;
@@ -41,8 +40,8 @@ main {
   margin: 40px auto;
   background: #fff;
   padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
   animation: fadeIn 0.6s ease;
 }
 
@@ -55,44 +54,44 @@ form {
 
 label {
   font-weight: 600;
-  color: #1e3c72;
+  color: #1a2a4f;
 }
 
 input, select, textarea {
   padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
   font-size: 1rem;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 input:focus, select:focus, textarea:focus {
-  border-color: #4facfe;
-  box-shadow: 0 0 8px rgba(79,172,254,0.4);
+  border-color: #1a2a4f;
+  box-shadow: 0 0 6px rgba(26,42,79,0.4);
   outline: none;
 }
 
 button {
-  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  background: #1a2a4f;
   color: #fff;
   font-weight: bold;
   padding: 14px;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.3s;
 }
 
 button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 15px rgba(26,42,79,0.4);
 }
 
 /* Mensagem de confirmação */
 #confirmationMessage {
   margin-top: 20px;
   padding: 14px;
-  border-radius: 10px;
+  border-radius: 8px;
   font-weight: bold;
   text-align: center;
   display: none;
@@ -112,7 +111,7 @@ button:hover {
 
 #reports h2 {
   margin-bottom: 15px;
-  color: #1e3c72;
+  color: #1a2a4f;
 }
 
 #reportList {
@@ -122,16 +121,16 @@ button:hover {
 
 #reportList li {
   background: #f9fafb;
-  border-left: 6px solid #4facfe;
+  border-left: 6px solid #1a2a4f;
   margin-bottom: 14px;
   padding: 14px;
-  border-radius: 10px;
+  border-radius: 8px;
   transition: transform 0.2s, background 0.3s;
 }
 
 #reportList li:hover {
   transform: scale(1.02);
-  background: #eef7ff;
+  background: #eef2ff;
 }
 
 /* Rodapé */
@@ -140,7 +139,7 @@ footer {
   padding: 20px;
   color: #fff;
   font-size: 0.9rem;
-  background: rgba(0,0,0,0.25);
+  background: #1a2a4f;
 }
 
 /* Animação */
