@@ -66,3 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 5000);
   }
 });
+function showMessage() {
+  const msg = document.getElementById("confirmationMessage");
+  msg.classList.remove("hidden"); // mostra a mensagem
+}
