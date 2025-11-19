@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("reportForm");
   const reportList = document.getElementById("reportList");
-  const confirmationBox = document.getElementById("confirmationBox");
+  const confirmationOverlay = document.getElementById("confirmationOverlay");
   const confirmationMessage = document.getElementById("confirmationMessage");
   const okButton = document.getElementById("okButton");
 
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!category || !details.trim()) {
       confirmationMessage.textContent = "⚠️ Preencha os campos obrigatórios!";
-      confirmationBox.style.display = "block";
+      confirmationOverlay.style.display = "flex";
       return;
     }
 
@@ -26,9 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
     form.reset();
     renderReports();
 
-    // Exibir mensagem de sucesso
+    // Exibir tela de confirmação grande
     confirmationMessage.textContent = "✅ Sua denúncia foi feita";
-    confirmationBox.style.display = "block";
+    confirmationOverlay.style.display = "flex";
   });
 
   okButton.addEventListener("click", () => {
