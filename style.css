@@ -63,3 +63,20 @@ button:hover {
   border-radius: 6px;
 }
 
+.hidden {
+  display: none;
+}
+
+#confirmationMessage {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.success {
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #10b981;
+}
