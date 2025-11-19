@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("reportForm");
   const reportList = document.getElementById("reportList");
+  const confirmationBox = document.getElementById("confirmationBox");
   const confirmationMessage = document.getElementById("confirmationMessage");
+  const okButton = document.getElementById("okButton");
 
-  // Array em memória (não persiste em JSON/localStorage)
   const reports = [];
 
   form.addEventListener("submit", (e) => {
@@ -14,27 +15,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const details = document.getElementById("details").value;
 
     if (!category || !details.trim()) {
-      showMessage("⚠️ Preencha os campos obrigatórios!", "error");
+      confirmationMessage.textContent = "⚠️ Preencha os campos obrigatórios!";
+      confirmationBox.style.display = "block";
       return;
     }
 
-    // Gerar protocolo único
-    const protocol = "JM-" + Date.now();
-
-    const report = {
-      category,
-      location,
-      details,
-      protocol
-    };
-
+    const report = { category, location, details };
     reports.push(report);
 
     form.reset();
     renderReports();
 
     // Exibir mensagem de sucesso
-    showMessage("✅ Sua denúncia foi feita! Protocolo: " + protocol, "success");
+    confirmationMessage.textContent = "✅ Sua denúncia foi feita";
+    confirmationBox.style.display = "block";
+  });
+
+  okButton.addEventListener("click", () => {
+    // Atualiza a página ao clicar em OK
+    location.reload();
   });
 
   function renderReports() {
@@ -44,17 +43,9 @@ document.addEventListener("DOMContentLoaded", () => {
       li.innerHTML = `
         <strong>${r.category}</strong><br>
         Local: ${r.location || "Não informado"}<br>
-        ${r.details}<br>
-        <em>Protocolo: ${r.protocol}</em>
+        ${r.details}
       `;
       reportList.appendChild(li);
     });
-  }
-
-  // Função para mostrar mensagens
-  function showMessage(text, type) {
-    confirmationMessage.textContent = text;
-    confirmationMessage.className = type; // aplica classe success ou error
-    confirmationMessage.style.display = "block";
   }
 });
