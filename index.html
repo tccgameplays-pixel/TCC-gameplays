@@ -42,7 +42,12 @@
   <footer>
     <small>© 2025 Colégio Cívico Militar Julio Mesquita</small>
   </footer>
-  <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+  <script type="module">
+  import emailjs from 'https://cdn.emailjs.com/dist/email.min.js';
+
+  emailjs.init("MFvCja_3XIi35WLbw"); // substitua pelo seu User ID
+</script>
+
 <script>
   (function(){
     emailjs.init("MFvCja_3XIi35WLbw"); // substitua pelo seu User ID do EmailJS
