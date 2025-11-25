@@ -17,12 +17,22 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    confirmationMessage.textContent = "✅ Sua denúncia foi feita";
-    confirmationOverlay.style.display = "flex";
-    form.reset();
+    // Envio via EmailJS
+    emailjs.send("service_jmd", "service_jmd", {
+      category: category,
+      location: location,
+      details: details
+    }).then(() => {
+      confirmationMessage.textContent = "✅ Sua denúncia foi enviada por email!";
+      confirmationOverlay.style.display = "flex";
+      form.reset();
+    }).catch((error) => {
+      confirmationMessage.textContent = "❌ Erro ao enviar: " + JSON.stringify(error);
+      confirmationOverlay.style.display = "flex";
+    });
   });
 
   okButton.addEventListener("click", () => {
-    location.reload();
+    confirmationOverlay.style.display = "none";
   });
 });
