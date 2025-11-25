@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Envio via EmailJS
-    emailjs.send("service_jmd", "service_jmd", {
+    emailjs.send("service_jmd", "template_jmd", {
       category: category,
       location: location,
       details: details
