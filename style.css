@@ -14,10 +14,14 @@ body {
   line-height: 1.6;
 }
 
-imagem-cu {
-background-image: ('Novo Projeto.png');
-background-size: 100vh;
-}
+   .image-container {
+        width: 400px; /* Set desired width */
+        height: 300px; /* Set desired height */
+        background-image: url("Novo\ Projeto.png"); /* Specify image path */
+        background-size: cover; /* Adjust image sizing (optional) */
+        background-position: center; /* Position the image (optional) */
+        background-repeat: no-repeat; /* Prevent image repetition (optional) */
+    }
 
 header {
   background: linear-gradient(135deg, #1a2a4f, #2c3e70);
