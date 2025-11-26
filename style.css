@@ -1,7 +1,6 @@
  .image-container {
         max-width: 223px;
         height: auto;
-         overflow: hidden;
         background-image: url("Novo\ Projeto.png"); 
         background-size: cover; 
         background-position: center; 
