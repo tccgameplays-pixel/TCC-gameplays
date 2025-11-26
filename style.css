@@ -1,5 +1,5 @@
  .image-container {
-        max-width: 223px;
+        width: 223px;
         height: auto;
         background-image: url("Novo\ Projeto.png"); 
         background-size: cover; 
