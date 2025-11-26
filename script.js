@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Envio via EmailJS
     emailjs.send("service_jmd", "template_jmd", {
+      to_email: "tccgameplays@gmail.com",
       category: category,
       location: location,
       details: details
