@@ -1,16 +1,17 @@
+ .image-container {
+        width: 223px; 
+        height: 148px; 
+        background-image: url("Novo\ Projeto.png"); 
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+    }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-  .image-container {
-        width: 223px; 
-        height: 148px; 
-        background-image: url("Novo\ Projeto.png"); 
-        background-size: stretch; 
-        background-position: center; 
-        background-repeat: no-repeat; 
-    }
+ 
 body {
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
   background: linear-gradient(135deg, #f0f4ff, #ffffff);
