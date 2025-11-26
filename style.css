@@ -3,7 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+  .image-container {
+        width: 200px; 
+        height: 200px; 
+        background-image: url("Novo\ Projeto.png"); 
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+    }
 body {
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
   background: linear-gradient(135deg, #f0f4ff, #ffffff);
@@ -14,14 +21,7 @@ body {
   line-height: 1.6;
 }
 
-   .image-container {
-        width: 400px; /* Set desired width */
-        height: 300px; /* Set desired height */
-        background-image: url("Novo\ Projeto.png"); /* Specify image path */
-        background-size: cover; /* Adjust image sizing (optional) */
-        background-position: center; /* Position the image (optional) */
-        background-repeat: no-repeat; /* Prevent image repetition (optional) */
-    }
+ 
 
 header {
   background: linear-gradient(135deg, #1a2a4f, #2c3e70);
