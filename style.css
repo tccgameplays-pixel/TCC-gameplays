@@ -14,6 +14,10 @@ body {
   line-height: 1.6;
 }
 
+imagem-cu {
+background-image: ('Novo Projeto.png');
+}
+
 header {
   background: linear-gradient(135deg, #1a2a4f, #2c3e70);
   color: #fff;
