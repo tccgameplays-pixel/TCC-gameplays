@@ -16,6 +16,7 @@ body {
 
 imagem-cu {
 background-image: ('Novo Projeto.png');
+background-size: 100vh;
 }
 
 header {
