@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       location: location,
       details: details
     }).then(() => {
-      confirmationMessage.textContent = "✅ Sua denúncia foi enviada por email!";
+      confirmationMessage.textContent = "✅ Sua denúncia foi enviada com sucesso!";
       confirmationOverlay.style.display = "flex";
       form.reset();
     }).catch((error) => {
