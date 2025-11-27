@@ -61,15 +61,15 @@ main {
 
 .texto1 {
 font-size: 3vh;
-position: center;
+justify-content: center;
 }
 .texto2 {
 font-size: 3vh;
-position: center;
+justify-content: center;
 }
 .texto3 {
 font-size: 3vh;
-position: center;
+justify-content: center;
 }
 
 form {
