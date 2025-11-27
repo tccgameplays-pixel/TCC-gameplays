@@ -77,16 +77,18 @@ box-sizing: border-box;
 }
 .input1 select {
 font-size: 2.5vh;
+width: 100%;
 }
 
 .input2 {
 font-size: 2vh;
-width: 100%;
-box-sizing: border-box;
+
 }
 
 .input2 input{
 font-size: 2.5vh;
+width: 100%;
+box-sizing: border-box;
 }
 
 .input3 {
