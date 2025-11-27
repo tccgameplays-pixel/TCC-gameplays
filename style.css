@@ -48,7 +48,7 @@ header p {
 }
 
 main {
-
+  flex: 1;
   width: 90vw;
   max-width: 1080px;
   margin: 50px auto;
