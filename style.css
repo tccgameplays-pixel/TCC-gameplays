@@ -1,7 +1,7 @@
  .image-container {
     position: absolute;
-        width: 223px;
-        height: 148px;
+        width: min(223px,10vw);
+        height: min(148px,10vh);
         bottom: 30px;
         left: 90px;
         background-image: url("Novo\ Projeto.png"); 
