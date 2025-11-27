@@ -3,12 +3,20 @@
         width: 223px;
         height: 148px;
         bottom: 30px;
-        left: calc(90px-20vh);
+        left: 90px;
         background-image: url("Novo\ Projeto.png"); 
         background-size: cover; 
         background-position: center; 
         background-repeat: no-repeat; 
     }
+    @media (orientation: portrait) {
+  .image-container {
+    width: 111px;
+    height: 74px;
+    left:20px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
