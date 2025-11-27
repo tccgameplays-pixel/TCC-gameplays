@@ -71,6 +71,17 @@ justify-content: center;
 font-size: 3vh;
 justify-content: center;
 }
+.input1 select{
+width: 100%;
+box-sizing: border-box;
+}
+
+.input2 {
+font-size: 2vh;
+width: 100%;
+box-sizing: border-box;
+}
+
 .input3 {
 font-size: 2vh;
 }
