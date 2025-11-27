@@ -11,8 +11,8 @@
     }
     @media (orientation: portrait) {
   .image-container {
-    width: 111px;
-    height: 74px;
+    width: 149px;
+    height: 99px;
     left:20px;
   }
 }
