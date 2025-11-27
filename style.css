@@ -59,7 +59,13 @@ main {
   animation: fadeIn 0.6s ease;
 }
 
-.textos {
+.texto1 {
+font-size: 1vh;
+}
+.texto2 {
+font-size: 1vh;
+}
+.texto3 {
 font-size: 1vh;
 }
 
