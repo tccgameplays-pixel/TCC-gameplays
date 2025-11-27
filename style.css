@@ -50,7 +50,7 @@ header p {
 main {
   flex: 1;
   width: 45vw;
-  max-width: 600px;
+  max-width: min(600px,90vw);
   margin: 50px auto;
   background: #fff;
   padding: 40px;
