@@ -1,9 +1,9 @@
  .image-container {
     position: absolute;
-        width: min(223px,30vw);
-        height: min(148px,30vh);
+        width: 223px;
+        height: 148px;
         bottom: 30px;
-        left: 90px;
+        left: calc(90px-20vh);
         background-image: url("Novo\ Projeto.png"); 
         background-size: cover; 
         background-position: center; 
