@@ -75,6 +75,7 @@ justify-content: center;
 font-size: 2vh;
  width: 80vw;
   max-width: 900px;
+  height: 30vh;
 }
 
 form {
