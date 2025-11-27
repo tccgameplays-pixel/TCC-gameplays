@@ -1,7 +1,7 @@
  .image-container {
     position: absolute;
-        width: min(223px,10vw);
-        height: min(148px,10vh);
+        width: 223px;
+        height: 148px;
         bottom: 30px;
         left: 90px;
         background-image: url("Novo\ Projeto.png"); 
@@ -48,7 +48,7 @@ header p {
 }
 
 main {
-  flex: 1;
+
   width: 90vw;
   max-width: 1080px;
   margin: 50px auto;
