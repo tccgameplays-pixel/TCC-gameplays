@@ -73,6 +73,8 @@ justify-content: center;
 }
 .input3 {
 font-size: 2vh;
+}
+.input3 textarea {
 width: 90%;
 box-sizing: border-box;
 }
