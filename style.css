@@ -87,7 +87,8 @@ font-size: 2vh;
 }
 .input3 textarea {
 width: 100%;
-height: max(40vh,300px);
+font-size: ;
+height: max(30vh,200px);
 box-sizing: border-box;
 }
 
