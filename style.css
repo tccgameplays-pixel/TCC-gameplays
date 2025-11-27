@@ -73,7 +73,8 @@ justify-content: center;
 }
 .input3 {
 font-size: 2vh;
-width: 100%;
+ width: 80vw;
+  max-width: 900px;
 }
 
 form {
